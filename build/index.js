@@ -17,15 +17,15 @@ function getView(){
         modalDetalles:()=>{
             return `
             <div class="modal fade" id="modalDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog modal-lg" role="document">
+                <div class="modal-dialog modal-dialog modal-xl" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white text-center">
-                            <h3 id="lbTituloGrafico">Gráfico</h3>
+                            <h5 class="text-center" id="lbTituloGrafico">Gráfico</h5>
                         </div>
                         <div class="modal-body">
                             <br>
                             <div class="table-responsive  col-12">
-                                <table class="table table-responsive table-hover table-striped">
+                                <table class="table table-responsive table-hover table-striped small">
                                     <thead class="bg-dark text-white">
                                         <tr>
                                             <td>Entidad</td>
@@ -44,7 +44,7 @@ function getView(){
                             </div>
                             
                             <div class="table-responsive col-12">
-                                <table class="table table-responsive table-hover table-striped">
+                                <table class="table table-responsive table-hover table-striped small">
                                     <thead class="bg-dark text-white">
                                         <tr>
                                             <td>PRG</td>
@@ -63,6 +63,7 @@ function getView(){
 
                         </div>
                         <div class="modal-body">
+                            <h6 class="text-center" id="lbTituloGrafico2">Gráfico</h6>
 
                             <canvas id="barChart"></canvas>
                          
@@ -174,6 +175,7 @@ function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuen
 function getDetallesCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion){
     
     document.getElementById('lbTituloGrafico').innerText= nombre;
+    document.getElementById('lbTituloGrafico2').innerText= nombre;
 
     //DETALLES DE LA TABLA INICIAL DEL MODAL
     document.getElementById('tblA').innerHTML = `<tr>
