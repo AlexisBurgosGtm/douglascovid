@@ -1,7 +1,8 @@
 
-var CACHE = 'datos2';
+var CACHE = 'datos3';
 const staticAssets = [
   './',
+  './assets/img/favicon/favicon.png',
   './css/front.css',
   './css/front.css.map',
   './vendor/bootstrap/dist/css/bootstrap.min.css',
