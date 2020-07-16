@@ -20,30 +20,14 @@ function getView(){
                 <div class="modal-dialog modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
-                            <h3 id="lbNegocio"></h3>
-                            <br>
-                            <label class="modal-title" id="lbDireccion"></label>
+                            <h3 id="lbTituloGrafico">Gráfico</h3>
                         </div>
 
                         <div class="modal-body">
-                          <div class="table-responsive">
-                            <table class="table table-responsive table-bordered table-striped">
-                              <thead>
-                                <tr>
-                                  <td>Producto</td>
-                                  <td>Precio</td>
-                                </tr>
-                              </thead>
-                              <tbody id="rootData"></tbody>
-                            </table>
-                          </div>
-                            <div class="row">
-                              
-                            </div>
+                          <div class="">
 
-                        </div>
-                        <div class="text-center" id="rootWhatsapp"></div>
-                        <br>
+                          
+                          </div>
                     </div>
                 </div>
             </div>
@@ -55,35 +39,84 @@ function getView(){
 
 }
 
-function getCard(logo,negocio,direccion,tipo,whatsapp,data){
-  
+function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion){
   
     return `
-        <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="col-12">
             <div class="card shadow border-primary">
-                <div class="card-header p-0">
-                    <img src=${logo} class="card-img-top rounded-top" alt="image">
+                <div class="card-header p-0 bg-primary">
+                    <h5 class="text-white text-left">Filtro: ${no}</h5>
                 </div>
-                <div class="card-body">
-                    <h3 class="card-title mt-3 text-primary">${negocio}</h3>
-                    <p class="card-text">${direccion}</p>
-                    <p class="card-text">
-                        <i></i>${tipo}
-                    </p>                
-                    <button class="btn btn-outline-primary" onclick="getDetallesCard('${negocio}','${direccion}','${whatsapp}','${data}');">Contáctame con ellos</a>
+                <div class="card-body text-center small">
+                    <div class="row row-cols-sm-2 row-cols-md-5 row-cols-lg-9 row-cols-xl-9">
+                        <div class="col">
+                            <b>Entidad</b>
+                            <br>${entidad}
+                                <br>
+                                <br>
+                            <b>Entidad</b>
+                            <br>${entidad}
+                        </div>
+                        <div class="col">
+                            <b>Programa</b>
+                            <br>${programa}
+                            <br><br>
+                            <b>Nombre</b>
+                            <br>${nombre}
+                        </div>
+                        <div class="col">
+                            <b>Subprograma</b>
+                            <br>${subprograma}
+                            <br><br>
+                            <b>Vigente</b>
+                            <br>${vigente}
+                        </div>
+                        <div class="col">
+                            <b>Proyecto</b>
+                            <br>${proyecto}
+                            <br><br>
+                            <b>Comprometido</b>
+                            <br>${comprometido}
+                        </div>
+                        <div class="col">
+                            <b>Actividad</b>
+                            <br>${actividad}
+                            <br><br>
+                            <b>Devengado</b>
+                            <br>${devengado}
+                        </div>
+                        <div class="col">
+                            <b>Renglón</b>
+                            <br>${renglon}
+                            <br><br>
+                            <b>Pagado</b>
+                            <br>${pagado}
+                        </div>
+                        <div class="col">
+                            <b>Fuente:</b>
+                            <br>${fuente}
+                            <br><br>
+                            <b>% Ejecución</b>
+                            <br>${ejecucion}
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-secondary btn-sm btn-circle" onclick="getDetallesCard();">
+                                +
+                            </button>
+                        </div>
+                    </div>    
+
+                    
                 </div>
             </div>
+            <br>
         </div>
+        
         `
 };
 
-function getDetallesCard(negocio,direccion,whatsapp,data){
+function getDetallesCard(){
 
-  
-    document.getElementById('lbNegocio').innerText = negocio;
-    document.getElementById('lbDireccion').innerText = direccion;
-    document.getElementById('rootData').innerHTML = data;
-    document.getElementById('rootWhatsapp').innerHTML = `<a href="https://api.whatsapp.com/send?phone=502${whatsapp}&text=Vi%20tu%20negocio%20en%20Mercados%20quisiera%20pedir" class="btn btn-success" target="blank">Enviar un Whatsapp</a>`
 
     $('#modalDetalles').modal('show');
 
@@ -91,13 +124,12 @@ function getDetallesCard(negocio,direccion,whatsapp,data){
 
 function addListeners(){
 
-    
+    // carga la lista de cards
     let str = '';
     data.map((rows)=>{
-        str = str + getCard(rows.logo,rows.negocio,rows.direccion,rows.tipo,rows.whatsapp, rows.productos)
+        str = str + getCard(rows.no, rows.entidad, rows.programa, rows.subprograma, rows.proyecto, rows.actividad, rows.renglon, rows.fuente,rows.nombre,rows.vigente,rows.comprometido,rows.devengado,rows.pagado,rows.ejecucion)
     }
     );
-
     root.innerHTML = str;
 
 }
@@ -109,20 +141,4 @@ function iniciarIndex(){
 };
 
 iniciarIndex();
-
-/* 
-socket.on('comandas nueva', function(msg){
-    if(GlobalSelectedForm=='DESPACHO'){
-        try {
-            let cmbTipoListado = document.getElementById('cmbTipoListado');
-            api.getPedidosPendientes('txtTotal','tblPedidosPendientes',cmbTipoListado.value);
-        } catch (error) {
-            console.log('no estás en despacho')
-        }
-    }
-});
-*/
-//"https://i.imgur.com/lGLwqQo.png"
-
-
 

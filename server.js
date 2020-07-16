@@ -3,9 +3,6 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 
-const execute = require('./router/connection');
-var routerNegocios = require('./router/routerNegocios');
-
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
@@ -39,7 +36,7 @@ app.get("/",function(req,res){
 }); 
 
 
-app.use('/negocios', routerNegocios);
+//app.use('/negocios', routerNegocios);
 
 
 app.use("/",router);
@@ -53,10 +50,7 @@ app.use("*",function(req,res){
 // SOCKET HANDLER
 io.on('connection', function(socket){
   
-  socket.on('comandas nueva', (msg,usuario)=>{
-    io.emit('comandas nueva', msg,usuario);
-  });
- 
+
   socket.on('comandas finalizada', (msg,usuario)=>{
     io.emit('comandas finalizada', msg,usuario);
   });

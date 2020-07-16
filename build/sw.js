@@ -1,7 +1,15 @@
 
-var CACHE = 'mercados';
+var CACHE = 'datos';
 const staticAssets = [
   './',
+  './css/front.css',
+  './css/front.css.map',
+  './vendor/bootstrap/dist/css/bootstrap.min.css',
+  './vendor/bootstrap/dist/css/bootstrap-grid.min.css',
+  './vendor/bootstrap/dist/css/bootstrap-reboot.min.css',
+  './vendor/bootstrap/dist/js/bootstrap.min.js',
+  './vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
+  './data.js',
   './manifest.json',
    './index.html',
   './sw.js'
