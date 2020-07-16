@@ -1,5 +1,5 @@
 
-var CACHE = 'datos';
+var CACHE = 'datos2';
 const staticAssets = [
   './',
   './css/front.css',
@@ -9,6 +9,7 @@ const staticAssets = [
   './vendor/bootstrap/dist/css/bootstrap-reboot.min.css',
   './vendor/bootstrap/dist/js/bootstrap.min.js',
   './vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
+  './vendor/chartjs.bundle.js',
   './data.js',
   './manifest.json',
    './index.html',
