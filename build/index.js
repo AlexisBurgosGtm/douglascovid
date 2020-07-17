@@ -95,7 +95,7 @@ function setMoneda(num,signo) {
     return (((sign) ? '' : '-') + signo + ' ' + num + ((cents == "00") ? '' : '.' + cents));
 };
 
-function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion){
+function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion,organismo,correlativo){
   
     return `
         <div class="col-12">
@@ -156,7 +156,15 @@ function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuen
                             <br>${ejecucion}
                         </div>
                         <div class="col">
-                            <button class="btn btn-secondary btn-sm btn-circle" onclick=
+                            <b>Organismo</b>
+                            <br>${organismo}
+                            <br><br>
+                            <b>Correlativo</b>
+                            <br>${correlativo}
+                        </div>
+
+                        <div class="col">
+                            <button class="btn btn-secondary btn-md btn-circle" onclick=
                             "getDetallesCard(${no},'${entidad}','${programa}','${subprograma}','${proyecto}','${actividad}','${renglon}','${fuente}','${nombre}','${vigente}','${comprometido}','${devengado}','${pagado}','${ejecucion}');">
                                 +
                             </button>
@@ -255,7 +263,7 @@ function addListeners(){
     // carga la lista de cards
     let str = '';
     data.map((rows)=>{
-        str = str + getCard(rows.no, rows.entidad, rows.programa, rows.subprograma, rows.proyecto, rows.actividad, rows.renglon, rows.fuente,rows.nombre,rows.vigente,rows.comprometido,rows.devengado,rows.pagado,rows.ejecucion)
+        str = str + getCard(rows.no, rows.entidad, rows.programa, rows.subprograma, rows.proyecto, rows.actividad, rows.renglon, rows.fuente,rows.nombre,rows.vigente,rows.comprometido,rows.devengado,rows.pagado,rows.ejecucion,rows.organismo,rows.correlativo)
     }
     );
     root.innerHTML = str;
