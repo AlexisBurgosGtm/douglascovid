@@ -95,13 +95,13 @@ function setMoneda(num,signo) {
     return (((sign) ? '' : '-') + signo + ' ' + num + ((cents == "00") ? '' : '.' + cents));
 };
 
-function getCard(no,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion,organismo,correlativo){
+function getCard(no,titulo,entidad,programa,subprograma,proyecto,actividad,renglon,fuente,nombre,vigente,comprometido,devengado,pagado,ejecucion,organismo,correlativo){
   
     return `
         <div class="col-12">
             <div class="card shadow border-primary">
                 <div class="card-header p-0 bg-primary">
-                    <h5 class="text-white text-left">Filtro: ${no}</h5>
+                    <h5 class="text-white text-left">Filtro: ${no}         ${titulo}</h5>
                 </div>
                 <div class="card-body text-center small">
                     <div class="row row-cols-sm-2 row-cols-md-5 row-cols-lg-9 row-cols-xl-9">
@@ -263,7 +263,7 @@ function addListeners(){
     // carga la lista de cards
     let str = '';
     data.map((rows)=>{
-        str = str + getCard(rows.no, rows.entidad, rows.programa, rows.subprograma, rows.proyecto, rows.actividad, rows.renglon, rows.fuente,rows.nombre,rows.vigente,rows.comprometido,rows.devengado,rows.pagado,rows.ejecucion,rows.organismo,rows.correlativo)
+        str = str + getCard(rows.no, rows.titulo, rows.entidad, rows.programa, rows.subprograma, rows.proyecto, rows.actividad, rows.renglon, rows.fuente,rows.nombre,rows.vigente,rows.comprometido,rows.devengado,rows.pagado,rows.ejecucion,rows.organismo,rows.correlativo)
     }
     );
     root.innerHTML = str;

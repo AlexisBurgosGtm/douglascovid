@@ -2,6 +2,7 @@ let data = [
     {
         id:1,
         no:1,
+        titulo:"FONDO BONO FAMILIA",
         entidad:"11130020",
         programa: 94,
         subprograma: 9,
@@ -21,7 +22,8 @@ let data = [
     },
     {   
         id:2,
-        no:2,   
+        no:2,
+        titulo:"FONDO PARA LA PROTECCIÓN DEL EMPLEO",   
         entidad:"11130011",
         programa: 94,
         subprograma: 9,
@@ -42,6 +44,7 @@ let data = [
     {
         id:3,
         no:3,
+        titulo:"FONDO DE CRÉDITO PARA CAPITAL DE TRABAJO",
         entidad:"11130018",
         programa: 94,
         subprograma: 9,
@@ -62,6 +65,7 @@ let data = [
     {
         id:4,
         no:4,
+        titulo:"FONDO DE PROTECCIÓN DE CAPITALES",
         entidad:"11130018",
         programa: 94,
         subprograma: 9,
@@ -81,6 +85,7 @@ let data = [
     {
         id:5,
         no:5,
+        titulo:"FONDO PARA LAS MICRO, PEQUEÑAS Y MEDIANAS EMPRESAS -MIPYMES-",
         entidad:"11130011",
         programa: 94,
         subprograma: 9,
@@ -101,6 +106,7 @@ let data = [
     {
         id:6,
         no:6,
+        titulo:"PROGRAMA DE AGRICULTURA CAMPESINA (AMPLIACIÓN DE COBERTURA) DEL PROGRAMA DE APOYO ALIMENTARIO Y PREVENCIÓN DEL COVID-19. ",
         entidad:"11130012",
         programa: 94,
         subprograma: 9,
@@ -121,6 +127,7 @@ let data = [
     {
         id:7,
         no:6.1,
+        titulo:"PROGRAMA DE APOYO ALIMENTARIO Y PREVENCIÓN DEL COVID-19. ",
         entidad:"11130012",
         programa: 94,
         subprograma: 9,
@@ -141,6 +148,7 @@ let data = [
     {
         id:8,
         no:6.2,
+        titulo:"PROGRAMA DEL ADULTO MAYOR (AMPLIACIÓN DE COBERTURA) DEL PROGRAMA DE APOYO ALIMENTARIO Y PREVENCIÓN DEL COVID-19. ",
         entidad:"11130010",
         programa: 94,
         subprograma: 9,
@@ -161,6 +169,7 @@ let data = [
     {
         id:9,
         no:7,
+        titulo:"GARANTIZAR LOS SERVICIOS PÚBLICOS",
         entidad:"11130018",
         programa: 94,
         subprograma: 9,
@@ -181,6 +190,7 @@ let data = [
     {
         id:10,
         no:8,
+        titulo:"PROGRAMA DE REMODELACIÓN E INFRAESTRUCTURA DE HOSPITALES, CENTROS DE SALUD, EQUIPAMIENTO HOSPITALARIO, INSUMOS E INSTALACIÓN DE LABORATORIOS PARA DETECCIÓN DE COVID-19",
         entidad:"11130009",
         programa: 94,
         subprograma: 9,
@@ -201,6 +211,7 @@ let data = [
     {
         id:11,
         no:9,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 1,
         subprograma: 0,
@@ -221,6 +232,7 @@ let data = [
     {
         id:12,
         no:9.1,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 11,
         subprograma: 0,
@@ -240,6 +252,7 @@ let data = [
     {
         id:13,
         no:9.2,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 12,
         subprograma: 0,
@@ -259,6 +272,7 @@ let data = [
     {
         id:14,
         no:9.3,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 13,
         subprograma: 0,
@@ -279,6 +293,7 @@ let data = [
     {
         id:15,
         no:9.4,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 14,
         subprograma: 0,
@@ -299,6 +314,7 @@ let data = [
     {
         id:16,
         no:9.5,
+        titulo:"BONO DE RIESGO PARA EL PERSONAL DE SALUD EXPUESTO AL COVID-19",
         entidad:"11130009",
         programa: 18,
         subprograma: 0,
@@ -317,47 +333,9 @@ let data = [
 
     },
     {
-        id:17,
-        no:10,
-        entidad:"11130009",
-        programa: 9,
-        subprograma: 0,
-        proyecto: 1,
-        actividad: 0,
-        renglon: 0,
-        fuente: 52,
-        organismo:401,
-        correlativo:75,
-        nombre:"MINISTERIO DE SALUD PÚBLICA Y ASISTENCIA SOCIAL",
-        vigente:1008884,
-        comprometido:0,
-        devengado:0,
-        pagado:0,
-        ejecucion:"0 %"
-
-    },
-    {
-        id:18,
-        no:10.1,
-        entidad:"11130009",
-        programa: 9,
-        subprograma: 0,
-        proyecto: 0,
-        actividad: 0,
-        renglon: 0,
-        fuente: 52,
-        organismo:402,
-        correlativo:132,
-        nombre:"MINISTERIO DE SALUD PÚBLICA Y ASISTENCIA SOCIAL",
-        vigente:15000000,
-        comprometido:0,
-        devengado:0,
-        pagado:0,
-        ejecucion:"0 %"
-    },
-    {
         id:19,
         no:10.2,
+        titulo:"ADQUISICIÓN DE VENTILADORES, PRUEBAS COVID-19, EQUIPO, TRAJES Y MATERIALES DE PROTECCIÓN PERSONAL",
         entidad:"11130009",
         programa: 94,
         subprograma: 9,
@@ -378,3 +356,44 @@ let data = [
 ]
 
 //19
+/*
+{
+    id:17,
+    no:10,
+    entidad:"11130009",
+    programa: 9,
+    subprograma: 0,
+    proyecto: 1,
+    actividad: 0,
+    renglon: 0,
+    fuente: 52,
+    organismo:401,
+    correlativo:75,
+    nombre:"MINISTERIO DE SALUD PÚBLICA Y ASISTENCIA SOCIAL",
+    vigente:1008884,
+    comprometido:0,
+    devengado:0,
+    pagado:0,
+    ejecucion:"0 %"
+
+},
+{
+    id:18,
+    no:10.1,
+    entidad:"11130009",
+    programa: 9,
+    subprograma: 0,
+    proyecto: 0,
+    actividad: 0,
+    renglon: 0,
+    fuente: 52,
+    organismo:402,
+    correlativo:132,
+    nombre:"MINISTERIO DE SALUD PÚBLICA Y ASISTENCIA SOCIAL",
+    vigente:15000000,
+    comprometido:0,
+    devengado:0,
+    pagado:0,
+    ejecucion:"0 %"
+},
+*/
