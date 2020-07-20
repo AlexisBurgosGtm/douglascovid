@@ -3,8 +3,6 @@ let root = document.getElementById('root');
 let rootModal = document.getElementById('rootModal');
 let GlobalSelectedListaProductos = [];
 
-//let socket = io();
-
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () =>
    navigator.serviceWorker.register('sw.js')
@@ -101,7 +99,7 @@ function getCard(no,titulo,entidad,programa,subprograma,proyecto,actividad,rengl
         <div class="col-12">
             <div class="card shadow border-primary">
                 <div class="card-header p-0 bg-primary">
-                    <h5 class="text-white text-left">Filtro: ${no}         ${titulo}</h5>
+                    <h5 class="text-white text-left">${no}         ${titulo}</h5>
                 </div>
                 <div class="card-body text-center small">
                     <div class="row row-cols-sm-2 row-cols-md-5 row-cols-lg-9 row-cols-xl-9">
@@ -254,9 +252,7 @@ function getDetallesCard(no,entidad,programa,subprograma,proyecto,actividad,reng
 
     $('#modalDetalles').modal('show');
 
-}
-
-
+};
 
 function addListeners(){
 
@@ -268,7 +264,7 @@ function addListeners(){
     );
     root.innerHTML = str;
 
-}
+};
 
 function iniciarIndex(){
     getView();
